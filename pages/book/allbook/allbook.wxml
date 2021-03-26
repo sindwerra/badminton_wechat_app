@@ -1,0 +1,34 @@
+<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">待处理的申请</view>
+</cu-custom>
+
+
+<view class='container'>
+  <!--加载中  -->
+  <view class='loading' wx:if="{{LOADING}}">
+    <image src='/assets/loading.svg'></image>
+  </view>
+  <!--数据列表  -->
+  <view class='box' wx:else>
+    <view wx:for="{{datas}}" wx:key="{{index}}" class="card" hover-class='hover-class' bindtap='viewDetailHandler' data-sign='{{item.siteinfo_sign}}' data-name='{{item.user_nickname}}'>
+      <!--左侧  -->
+      <view class='left'>
+        <view class='avatar' style='{{item.style}}'>
+          <text>{{item.user_nickname[0]}}</text>
+        </view>
+        <text>{{item.user_nickname}}</text>
+      </view>
+      <!--右侧  -->
+      <view class='right'>
+        <text class='info'>{{item.siteinfo_sign}}  </text>
+        <text class='title'>{{item.book_title}}</text>
+      </view>
+    </view>
+  </view>
+  <!--无数据  -->
+  <view wx:if="{{!LOADING && (datas.length === 0)}}" class='nodata'>
+    <image src='/assets/nodata.svg'></image>
+    <text>暂时没有待处理的申请喔 ~ </text>
+  </view>
+</view>

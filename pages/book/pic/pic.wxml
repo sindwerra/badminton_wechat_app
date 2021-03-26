@@ -1,0 +1,36 @@
+  
+  <cu-custom bgColor="bg-gradual-pink" isBack="{{true}}"><view slot="backText">返回</view><view slot="content">场地图片</view></cu-custom>
+
+
+  <view class="cu-modal {{modalName=='Image'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="bg-img" style="background-image: url({{pic_url_}});height:200px;">
+      <view class="cu-bar justify-end text-white">
+        <view class="action" bindtap="hideModal">
+          <text class="cuIcon-close "></text>
+        </view>
+      </view>
+    </view>
+    <view class="cu-bar bg-white">
+      <view class="action margin-0 flex-sub  solid-left" bindtap="hideModal" >已查看图片</view>
+    </view>
+  </view>
+</view>
+  
+
+<view class="cu-card dynamic ">
+  <view class="cu-item shadow">
+      <!-- <view wx:for="{{pic_url_list}}" wx:key="index"  > -->
+
+    
+        <view class="bg-img {{isCard?'':'only-img'}}" data-url="{{pic_url1}}" bindtap="showModal" style="background-image:url({{pic_url1}});" wx:for="{{isCard?9:1}}" wx:key="{{index}}">
+        </view>
+
+<view class="bg-img {{isCard?'':'only-img'}}"  bindtap="showModal" data-url="{{pic_url2}}"style="background-image:url({{pic_url2}});" wx:for="{{isCard?9:1}}" wx:key="{{index}}">
+        </view>
+        <view class="bg-img {{isCard?'':'only-img'}}" data-url="{{pic_url3}}" bindtap="showModal" style="background-image:url({{pic_url3}});" wx:for="{{isCard?9:1}}" wx:key="{{index}}">
+        </view>
+
+    <!-- </view> -->
+  </view>
+</view>

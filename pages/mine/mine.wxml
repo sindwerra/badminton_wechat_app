@@ -1,0 +1,66 @@
+<cu-custom bgColor="bg-gradual-pink" >
+  <view slot="content">我的</view>
+</cu-custom>
+
+<view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+  <view class="cu-item arrow">
+    <button class="cu-btn content" bindtap="about">
+      <text class="cuIcon-writefill text-cyan"></text>
+      <text class="text-grey">关于小程序介绍</text>
+    </button>
+  </view>  
+
+
+</view>
+
+<view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+  <view class="cu-item arrow">
+    <button class="cu-btn content" bindtap="myBooked">
+      <text class="cuIcon-writefill text-cyan"></text>
+      <text class="text-grey">我参加过的</text>
+    </button>
+  </view>
+
+  <view class="cu-item arrow">
+    <button class="cu-btn content" bindtap="AllBooked">
+      <text class="cuIcon-writefill text-cyan"></text>
+      <text class="text-grey">我的总预约次数</text>
+    </button>
+  </view>
+
+  <view class="cu-item arrow">
+    <button class="cu-btn content" bindtap="BookedSuccess">
+      <text class="cuIcon-writefill text-cyan"></text>
+      <text class="text-grey">我的预约成功次数</text>
+    </button>
+  </view>
+
+  <view class="cu-item arrow">
+      <button class="cu-btn content" open-type="feedback">
+        <text class="cuIcon-writefill text-cyan"></text>
+        <text class="text-grey">意见反馈</text>
+      </button>
+    </view>
+</view>
+
+<tabbar tabbar="{{tabbar}}"></tabbar>
+
+
+<view class="cu-modal {{modalName=='ToastModel'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="content">{{modalTitle}}</view>
+      <view class="action" bindtap="hideModal">
+        <text class="cuIcon-close text-red"></text>
+      </view>
+    </view>
+    <view class="padding-xl">
+      {{modalContent}}
+    </view>
+    <view class="cu-bar bg-white justify-end">
+      <view class="action">
+        <button class="cu-btn bg-green margin-left" bindtap="hideModal">确定</button>
+      </view>
+    </view>
+  </view>
+</view>

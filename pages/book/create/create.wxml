@@ -1,0 +1,77 @@
+<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
+	<view slot="backText">返回</view>
+	<view slot="content">创建新的场地信息</view>
+</cu-custom>
+<form>
+	<view class="cu-form-group margin-top">
+		<view class="title">标题</view>
+		<input placeholder="输入场地信息标题" bindinput="titleInput" value='{{site_title}}'></input>
+	</view>
+
+  <view class="cu-form-group margin-top">
+		<view class="title">省市</view>
+		<input placeholder="请填写球馆所在省市" bindinput="zoneInput" value='{{site_zone}}'></input>
+	</view>
+
+	<view class="cu-form-group">
+		<view class="title">具体区域</view>
+		<input placeholder="请具体到球馆的具体位置" site  bindinput="locationInput" value='{{site_location}}'></input>
+	</view>
+
+  <view class="cu-form-group">
+		<view class="title">收款方式</view>
+		<input placeholder="AA付款/按时付费等"  bindinput="payment_methodInput" value='{{site_payment_method}}'></input>
+	</view>
+
+
+  <view class="cu-form-group">
+		<view class="title">日期</view>
+		<picker mode="date" value="{{date}}" start="1970-09-01" end="2020-09-01" bindchange="DateChange">
+			<view class="picker">
+				{{date}}
+			</view>
+		</picker>
+	</view>
+  
+	<view class="cu-form-group">
+		<view class="title">具体时间</view>
+		<input placeholder="请精确到小时"  bindinput="timeInput" value='{{site_time}}'></input>
+	</view>
+  
+
+	<view class="cu-form-group margin-top">
+		<view class="title">限制人数</view>
+		<input placeholder="" bindinput="limitInput" value='{{site_limit}}'></input>
+	</view>
+
+	<view class="cu-form-group align-start margin-top">
+		<view class="title">备注信息</view>
+		<textarea maxlength="-1" disabled="{{modalName!=null}}" bindinput="noteInput" placeholder="添加一段活动的相关描述或其他备注信息" value="{{noteValue}}"></textarea>
+	</view>
+</form>
+
+
+<view class="padding flex flex-direction" bindtap="CreateSiteInfo" >
+  <button class="cu-btn bg-grey lg">创建场地</button>
+</view>
+
+
+
+<view class="cu-modal {{modalName=='ToastModel'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="content">{{modalTitle}}</view>
+      <view class="action" bindtap="hideModal">
+        <text class="cuIcon-close text-red"></text>
+      </view>
+    </view>
+    <view class="padding-xl">
+      {{modalContent}}
+    </view>
+    <view class="cu-bar bg-white justify-end">
+      <view class="action">
+        <button class="cu-btn bg-green margin-left" bindtap="hideModal">确定</button>
+      </view>
+    </view>
+  </view>
+</view>

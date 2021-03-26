@@ -1,0 +1,30 @@
+<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">我发布的</view>
+</cu-custom>
+
+
+<view class='container'>
+  <!--加载中  -->
+  <view class='loading' wx:if="{{LOADING}}">
+    <image src='/assets/loading.svg'></image>
+  </view>
+  <!--数据列表  -->
+  <view class='box' wx:else>
+    <view wx:for="{{datas}}" wx:key="{{index}}" class="card" hover-class='hover-class'  data-time='{{item.time_book}}' data-site='{{item.site_book}}' data-app='{{item.openId}}'>
+      <view class='right'>
+        <text class='info'>地点：{{item.zone_book}}  / {{item.site_book}}</text>
+        <text class='info'>时间：{{item.time_book}}  </text>
+        <text class='info'>收费方式：{{item.payment_method}}  </text>
+        <text class='info'>限制人数：{{item.limit_number}} / 剩余人数 {{item.remaining_places}} </text>
+        <text class='title'>活动详情：{{item.title_book}}</text>
+      </view>
+    </view>
+  </view>
+  
+  <!--无数据  -->
+  <view wx:if="{{!LOADING && (datas.length === 0)}}" class='nodata'>
+    <image src='/assets/nodata.svg'></image>
+    <text>暂时没有新的场地信息哦 ~ </text>
+  </view>
+</view>

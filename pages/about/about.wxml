@@ -1,0 +1,21 @@
+<include src="../../libs/weToast/weToast.wxml" />
+
+
+<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">羽毛球预约系统</view>
+</cu-custom>
+
+
+<view class='margin-xl bg-white padding-xl radius shadow-lg'>
+  <view class='text-center margin-bottom text-lg  text-grey'>关于</view>
+  <view class='text-content'>
+    <view>Hi！欢迎使用“羽毛球预约系统”！</view>
+    <view class='margin-top-sm'>下面是简单介绍</view>
+    <view class='margin-top-sm'>此小程序的目的是...</view>
+    <view class='margin-top-sm'></view>
+    <view class='margin-top-sm' style="text-align:right;">By: 作者名</view>
+  </view>
+</view>  
+
+

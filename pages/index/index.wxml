@@ -1,0 +1,44 @@
+<cu-custom bgColor="bg-blue">
+  <view slot="content">羽毛球预约系统</view>
+</cu-custom>
+
+
+<view wx:if="{{!isManager}}">
+
+ <view class="top-Nav box-line">
+   <view class="lf-line1"></view>
+    <view class='lf-z'>用户功能</view>
+  </view>
+
+<!-- 2×2按钮 -->
+<view class='nav-list margin-top-main'>
+    <navigator open-type="navigate" hover-class='none' url="{{item.path}}" class="nav-li bg-{{item.color}}" wx:for="{{userfuctions}}" wx:key>
+      <view class="nav-title">{{item.title}}</view>
+      <view class="nav-name">{{item.name}}</view>
+      <text class='cuIcon-{{item.icon}}'></text>
+    </navigator>
+</view>
+
+</view>
+
+
+<!-- wx:if="{{is_manager === '1'}}" -->
+<view wx:if="{{isManager}}">
+<view >
+  <view class="top-Nav box-line">
+    <view class="lf-line2"></view>
+    <view class='lf-z'>管理员功能</view>
+  </view>
+
+  <!-- 2×2按钮 -->
+  <view  class='nav-list margin-top-main' style="display:{{showmangferfun}};">
+    <navigator open-type="navigate" hover-class='none' url="{{item.path}}" class="nav-li bg-{{item.color}}" wx:for="{{managerfuctions}}" wx:key>
+      <view class="nav-title">{{item.title}}</view>
+      <view class="nav-name">{{item.name}}</view>
+      <text class='cuIcon-{{item.icon}}'></text>
+    </navigator>
+  </view>
+</view>
+
+  </view>
+<tabbar tabbar="{{tabbar}}"></tabbar>

@@ -1,0 +1,229 @@
+/**index.wxss**/
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0px 0rpx 0px 0rpx;
+  justify-content: space-between;
+}
+
+.cu-bar {
+	display: flex;
+	position: relative;
+	align-items: center;
+	min-height: 80rpx;
+	justify-content: space-between;
+}
+
+.margin-top {
+	margin-top: 1rpx;
+}
+
+.margin-top-main {
+	margin-top: 60rpx;
+}
+
+.margin-top-last {
+	margin-top: 20rpx;
+}
+
+.cu-card {
+	display: block;
+	overflow: hidden;
+  border-radius: 15rpx;
+	padding: 0 10rpx;
+}
+
+.cu-card>.cu-item {
+	display: block;
+	background-color: var(--white);
+	overflow: hidden;
+	border-radius: 10rpx;
+}
+
+.cu-card.article {
+	display: block;
+}
+
+.cu-card.article>.cu-item {
+	padding-bottom: 30rpx;
+}
+
+.cu-card.article>.cu-item .title {
+	font-size: 30rpx;
+	font-weight: 900;
+	color: var(--black);
+	line-height: 80rpx;
+	padding: 0 30rpx;
+}
+
+.cu-card.article>.cu-item .content {
+	display: flex;
+	padding: 0 30rpx;
+}
+
+.cu-card.article>.cu-item .content .desc {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.cu-card.article>.cu-item .content .text-content {
+	font-size: 28rpx;
+	color: #888;
+	height: 100%;
+	overflow: hidden;
+}
+
+.cu-tag {
+	font-size: 24rpx;
+	vertical-align: middle;
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+	padding: 0rpx 16rpx;
+	height: 48rpx;
+	font-family: Helvetica Neue, Helvetica, sans-serif;
+	white-space: nowrap;
+}
+
+.list-item-instructions {
+  /* 控制显示的行数 */
+  max-height: 90rpx;
+  line-height: 30rpx;
+  /* 显示多行 */
+  display:-webkit-box; 
+  overflow:hidden; 
+  /* 3为显示的行数 */
+  -webkit-line-clamp:3;
+  -webkit-box-orient:vertical;
+  margin-bottom: 10rpx
+}
+
+
+
+
+.top-Nav{
+  margin-top: 45px;
+  display: flex;
+  padding: 0rpx 0 30rpx 0;
+  justify-content:space-around;
+  display:-webkit-box;
+  height: 50rpx;
+  line-height: 50rpx;
+  width: 100%;
+}
+.lf-line1 {
+  width:11rpx;
+  height:55rpx;
+  border-radius:5rpx;
+  background-color:#5899e9;
+  margin-right:35rpx;
+  position: relative;
+  left: 20rpx;
+}
+.lf-line2 {
+  width:11rpx;
+  height:55rpx;
+  border-radius:5rpx;
+  background-color:#e95858;
+  margin-right:35rpx;
+  position: relative;
+  left: 20rpx;
+}
+.lf-z{
+  font-size: 32rpx;
+}
+
+.nodata {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.nodata > image {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.nodata > text {
+  font-size: 14px;
+  margin-top: 10px;
+  font-weight: 300;
+  color: #666;
+}
+
+
+
+
+
+
+
+
+
+.headView {
+  margin: 90rpx 50rpx 90rpx 50rpx; /*上右下左*/
+  align-items:center;  
+  justify-content: center; 
+}
+.headImageView {
+  justify-content: center; 
+  align-items:center;  
+  display: flex;
+  /* display: block; */
+  margin-left: 25px;
+  margin-top: 25px;
+  margin-right: 25px;
+  margin-bottom: 0px;
+  height: 200rpx;
+}
+.headImage{
+  display: flex;
+  width: 150rpx;
+  height: 150rpx;
+}
+.titleText {
+  margin-left: 25px;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #020e0f;
+  text-align: center;
+}
+.contentText {
+  margin-left: 25px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+}
+.authBtn {
+  margin-top: 35px;
+  margin-left: 25px;
+  margin-right: 25px;
+  height: 45px;
+ font-size: 17.5px;
+}
+
+
+
+.floating {
+	width: 120rpx;
+	height: 120rpx;
+	display: flex;
+	position: fixed;
+	right: 50rpx;
+	bottom: 130rpx;
+	justify-content: center;
+	align-items: center;
+}
+
+.floating image {
+	width: 60rpx;
+	height: 60rpx;
+}
+
