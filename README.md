@@ -1,0 +1,3 @@
+# badminton_wechat_app
+
+蛋蛋的预定小程序前端代码，目前使用Replace-Traditional-API-with-DRF分支进行开发配合后端代码的DRF以及数据库模型重构，待测试稳定后会合入master分支并删除该分支，同时将前后端项目的repo合为一个repo
